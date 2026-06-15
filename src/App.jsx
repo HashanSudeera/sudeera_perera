@@ -7,8 +7,8 @@ import DesignWork from './pages/DesignWork.jsx';
 function App() {
 
   return (
-    <Router>
-      <Routes>
+    <Router basename="/sudeera_perera">
+      <Routes >
         <Route path="/" element={<Home />} />
         <Route path="/work" element={<Works />} />
         <Route path="/design" element={<DesignWork />}/>
