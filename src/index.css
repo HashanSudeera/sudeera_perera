@@ -1,0 +1,74 @@
+/* 1. Import your custom font */
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Display:ital,wght@0,300..900;1,300..900&display=swap');
+
+/* 2. Import Tailwind (v4 syntax) */
+@import "tailwindcss";
+
+/* 3. Define your custom theme variables */
+@theme {
+  /* Font Family */
+  --font-sans: "Red Hat Display", sans-serif;
+
+  /* Primary Colors (Yellow) */
+  --color-yellow-50: #fdfde6;
+  --color-yellow-100: #f8f8b0;
+  --color-yellow-200: #f5f58a;
+  --color-yellow-300: #f1f154;
+  --color-yellow-400: #eeee33;
+  --color-yellow-500: #eaea00;
+  --color-yellow-600: #d5d500;
+  --color-yellow-700: #a6a600;
+  --color-yellow-800: #818100;
+  --color-yellow-900: #626200;
+
+  /* Secondary Colors (Grey) */
+  --color-grey-50: #e7e7e7;
+  --color-grey-100: #b6b6b6;
+  --color-grey-200: #929292;
+  --color-grey-300: #616161;
+  --color-grey-400: #424242;
+  --color-grey-500: #131313;
+  --color-grey-600: #111111;
+  --color-grey-700: #0d0d0d;
+  --color-grey-800: #0a0a0a;
+  --color-grey-900: #080808;
+
+  /* Typography (Font Size & Line Height) */
+  --text-regular: 16px;
+  --text-regular--line-height: 24px;
+
+  --text-h6: 29px;
+  --text-h6--line-height: 24px;
+
+  --text-h5: 37px;
+  --text-h5--line-height: 37.5px;
+
+  --text-h4: 49px;
+  --text-h4--line-height: 37.5px;
+
+  --text-h3: 64px;
+  --text-h3--line-height: 37.5px;
+
+  --text-h2: 84px;
+  --text-h2--line-height: 37.5px;
+
+  --text-h1: 110px;
+  --text-h1--line-height: 37.5px;
+}
+
+/* 4. Apply your base background and text colors to the whole site */
+@layer base {
+  body {
+    @apply bg-grey-600 text-grey-50 antialiased;
+  }
+}
+
+@keyframes scroll {
+  0% { transform: translateX(0); }
+  100% { transform: translateX(-100%); }
+}
+
+.animate-scroll {
+  /* You can adjust the '20s' to make it faster or slower */
+  animation: scroll 30s linear infinite;
+}
