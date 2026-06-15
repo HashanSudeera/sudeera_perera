@@ -1,7 +1,7 @@
 import React from 'react';
 import Navbar from '../components/Navbar'; // Adjust path if needed
 
-import { Link } from 'react-router-dom';
+
 
 const DesignWork = () => {
   // Mock array to generate the 12 portfolio items quickly
