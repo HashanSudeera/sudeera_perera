@@ -1,0 +1,779 @@
+[
+  {
+    "id": 1,
+    "title": "Hipernova",
+    "category": "Electro(EDM)",
+    "imageUrl": "./album_covers/hipernova.jpg"
+  },
+  {
+    "id": 2,
+    "title": "Jhon Stockton",
+    "category": "Hip Hop",
+    "imageUrl": "./album_covers/Jhon Stockton1.jpg"
+  }
+ ,
+  {
+    "id": 3,
+    "title": "Dance Floor",
+    "category": "Electro(EDM)",
+    "imageUrl": "./album_covers/Dance floor cover art.jpg"
+  }
+ ,
+ {
+    "id": 4,
+    "title": "M For The Movement",
+    "category": "Typography",
+    "imageUrl": "./album_covers/m for the movement.jpg"
+  }
+  ,
+  {
+    "id": 5,
+    "title": "Castaway",
+    "category": "Portrait",
+    "imageUrl": "./album_covers/Castaway2.jpg"
+  }
+  ,
+  {
+    "id": 6,
+    "title": "Crimson",
+    "category": "Electro(EDM)",
+    "imageUrl": "./album_covers/crimson.jpg"
+  }
+  ,
+  {
+    "id": 7,
+    "title": "Stacy",
+    "category": "Manipulation",
+    "imageUrl": "./album_covers/stacy modifi.jpg"
+  }
+  ,
+  {
+    "id": 8,
+    "title": "Squad Up",
+    "category": "Manipulation",
+    "imageUrl": "./album_covers/squad up.jpg"
+  }
+ ,
+  {
+    "id": 9,
+    "title": "Poison",
+    "category": "Portrait",
+    "imageUrl": "./album_covers/poison1.jpg"
+  }
+  ,
+  {
+    "id": 10,
+    "title": "Night Drive",
+    "category": "Synthwave",
+    "imageUrl": "./album_covers/night drive 2 edited 7.jpg"
+  }
+  
+ ,
+ {
+    "id": 11,
+    "title": "Enamorarme",
+    "category": "Pop/Urban",
+    "imageUrl": "./album_covers/Enamorarme.jpg"
+  }
+  ,
+  {
+    "id": 12,
+    "title": "ODIO",
+    "category": "Manipulation",
+    "imageUrl": "./album_covers/ODIO-cover1.3.jpg"
+  }
+  ,
+   {
+    "id": 13,
+    "title": "The Prodigy",
+    "category": "Manipulation",
+    "imageUrl": "./album_covers/The Prodigy.jpg"
+  },
+  {
+    "id": 14,
+    "title": "Thoothpaste",
+    "category": "Synthwave",
+    "imageUrl": "./album_covers/thoothpaste.jpg"
+  },
+  {
+    "id": 15,
+    "title": "Time Travell",
+    "category": "Manipulation",
+    "imageUrl": "./album_covers/time travel1.jpg"
+  },
+  {
+    "id": 16,
+    "title": "Untitl Album Cover 14",
+    "category": "Portrait",
+    "imageUrl": "./album_covers/until.jpg"
+  }
+ 
+  ,
+  {
+    "id": 17,
+    "title": "Around",
+    "category": "Manipulation",
+    "imageUrl": "./album_covers/center.jpg"
+  },
+  {
+    "id": 18,
+    "title": "M For The Movement",
+    "category": "Electro(EDM)",
+    "imageUrl": "./album_covers/covedadadr.jpg"
+  },
+  {
+    "id": 19,
+    "title": "",
+    "category": "Portrait",
+    "imageUrl": "./album_covers/cover.jpg"
+  },
+  {
+    "id": 20,
+    "title": "",
+    "category": "Manipulation",
+    "imageUrl": "./album_covers/cover1.jpg"
+  },
+  {
+    "id": 21,
+    "title": "M",
+    "category": "Hip Hop",
+    "imageUrl": "./album_covers/covser.jpg"
+  },
+  {
+    "id": 22,
+    "title": "Crazy Bitches",
+    "category": "Typography",
+    "imageUrl": "./album_covers/crazy bitches 1.jpg"
+  },
+  {
+    "id": 23,
+    "title": "A New Dawn",
+    "category": "Manipulation",
+    "imageUrl": "./album_covers/a new dawn.jpg"
+  }
+  ,
+  {
+    "id": 24,
+    "title": "Cuore in Silenzio",
+    "category": "Typography",
+    "imageUrl": "./album_covers/Cuore in Silenzio 1.2.jpg"
+  },
+   {
+    "id": 25,
+    "title": "4 Dayz Ago",
+    "category": "Typography",
+    "imageUrl": "./album_covers/4 dayz ago1.jpg"
+  }
+  ,
+  {
+    "id": 26,
+    "title": "Dark Orbit",
+    "category": "Manipulation",
+    "imageUrl": "./album_covers/darkorbit.jpg"
+  },
+  {
+    "id": 27,
+    "title": "Deep",
+    "category": "Manipulation",
+    "imageUrl": "./album_covers/deep1.jpg"
+  },
+  {
+    "id": 28,
+    "title": "Desert Eagle",
+    "category": "Manipulation",
+    "imageUrl": "./album_covers/desert eagle3.jpg"
+  },
+  {
+    "id": 29,
+    "title": "Mask",
+    "category": "Typography",
+    "imageUrl": "./album_covers/Design-3.jpg"
+  },
+  {
+    "id": 30,
+    "title": "Dip",
+    "category": "Portrait",
+    "imageUrl": "./album_covers/dip.jpg"
+  },
+  {
+    "id": 31,
+    "title": "Dont Froget",
+    "category": "Typography",
+    "imageUrl": "./album_covers/dont froget.jpg"
+  },
+  {
+    "id": 32,
+    "title": "Down",
+    "category": "Electro(EDM)",
+    "imageUrl": "./album_covers/down1.jpg"
+  },
+  {
+    "id": 33,
+    "title": "Ella's Groove",
+    "category": "Electro(EDM)",
+    "imageUrl": "./album_covers/EllasGroove.jpg"
+  },
+  {
+    "id": 34,
+    "title": "Beautiful Disaster",
+    "category": "Typography",
+    "imageUrl": "./album_covers/beautiful disaster.jpg"
+  }
+  ,
+  {
+    "id": 35,
+    "title": "Endless Horizon",
+    "category": "Manipulation",
+    "imageUrl": "./album_covers/endless horizon.jpg"
+  },
+  {
+    "id": 36,
+    "title": "Evil",
+    "category": "Manipulation",
+    "imageUrl": "./album_covers/evil.jpg"
+  },
+  {
+    "id": 37,
+    "title": "F0rum",
+    "category": "Manipulation",
+    "imageUrl": "./album_covers/f0rum1.jpg"
+  },
+  {
+    "id": 38,
+    "title": "Left a Stain",
+    "category": "Typography",
+    "imageUrl": "./album_covers/finel 1.jpg"
+  },
+  {
+    "id": 39,
+    "title": "Signed",
+    "category": "Typography",
+    "imageUrl": "./album_covers/finel one.jpg"
+  },
+  {
+    "id": 40,
+    "title": "Contra",
+    "category": "Typography",
+    "imageUrl": "./album_covers/finel.jpg"
+  },
+  {
+    "id": 41,
+    "title": "",
+    "category": "Typography",
+    "imageUrl": "./album_covers/finel1.jpg"
+  },
+  {
+    "id": 42,
+    "title": "",
+    "category": "Manipulation",
+    "imageUrl": "./album_covers/forest 1.jpg"
+  },
+  {
+    "id": 43,
+    "title": "Gamestop",
+    "category": "Electro(EDM)",
+    "imageUrl": "./album_covers/gamestop.jpg"
+  },
+  {
+    "id": 44,
+    "title": "Grate Viper",
+    "category": "Manipulation",
+    "imageUrl": "./album_covers/grate viper.jpg"
+  },
+  {
+    "id": 45,
+    "title": "Grind Today",
+    "category": "Typography",
+    "imageUrl": "./album_covers/grind today.jpg"
+  },
+  {
+    "id": 46,
+    "title": "Gucci Lover",
+    "category": "Portrait",
+    "imageUrl": "./album_covers/Gucci losver.jpg"
+  },
+  {
+    "id": 47,
+    "title": "Gucci Lover",
+    "category": "Portrait",
+    "imageUrl": "./album_covers/gucci lover.jpg"
+  },
+  {
+    "id": 48,
+    "title": "Heartbroken",
+    "category": "Typography",
+    "imageUrl": "./album_covers/hartbroken.jpg"
+  },
+  {
+    "id": 49,
+    "title": "Her Story",
+    "category": "Portrait",
+    "imageUrl": "./album_covers/her story.jpg"
+  },
+  {
+    "id": 50,
+    "title": "Her",
+    "category": "Manipulation",
+    "imageUrl": "./album_covers/her.jpg"
+  },
+  {
+    "id": 51,
+    "title": "High Roller",
+    "category": "Manipulation",
+    "imageUrl": "./album_covers/high roller.jpg"
+  },
+  {
+    "id": 52,
+    "title": "The blue print",
+    "category": "Portrait",
+    "imageUrl": "./album_covers/1st cover.jpg"
+  }
+  ,
+  {
+    "id": 53,
+    "title": "Hit The Floor",
+    "category": "Electro(EDM)",
+    "imageUrl": "./album_covers/hit the floor.jpg"
+  },
+  {
+    "id": 54,
+    "title": "How Many",
+    "category": "Typography",
+    "imageUrl": "./album_covers/how many.jpg"
+  },
+  {
+    "id": 55,
+    "title": "Hurt My Sprit",
+    "category": "Manipulation",
+    "imageUrl": "./album_covers/hurt my sprit.jpg"
+  },
+  {
+    "id": 56,
+    "title": "Hyper Drive",
+    "category": "Electro(EDM)",
+    "imageUrl": "./album_covers/hyper drive 1.jpg"
+  },
+  {
+    "id": 57,
+    "title": "I And U",
+    "category": "Typography",
+    "imageUrl": "./album_covers/i and u-dkizzy.jpg"
+  },
+  {
+    "id": 58,
+    "title": "Illuminasty",
+    "category": "Manipulation",
+    "imageUrl": "./album_covers/illuminasty.jpg"
+  },
+  {
+    "id": 59,
+    "title": "In Da Building",
+    "category": "Hip Hop",
+    "imageUrl": "./album_covers/in da building.jpg"
+  },
+  {
+    "id": 60,
+    "title": "Jack Shades",
+    "category": "Portrait",
+    "imageUrl": "./album_covers/Jack Shades.jpg"
+  },
+   {
+    "id": 61,
+    "title": "",
+    "category": "Manipulation",
+    "imageUrl": "./album_covers/2.3nd.jpg"
+  }
+  ,
+  {
+    "id": 62,
+    "title": "Distance",
+    "category": "Manipulation",
+    "imageUrl": "./album_covers/kazwalker.jpg"
+  },
+  {
+    "id": 63,
+    "title": "Kobra",
+    "category": "Manipulation",
+    "imageUrl": "./album_covers/kobra.jpg"
+  },
+  {
+    "id": 64,
+    "title": "La Aye",
+    "category": "Pop/Urban",
+    "imageUrl": "./album_covers/la-aye.jpg"
+  },
+  {
+    "id": 65,
+    "title": "Love Me Tender",
+    "category": "Manipulation",
+    "imageUrl": "./album_covers/love me tender4.jpg"
+  },
+  {
+    "id": 66,
+    "title": "10 Good Rules",
+    "category": "Typography",
+    "imageUrl": "./album_covers/10 good rules5.jpg"
+  }
+  ,
+  {
+    "id": 67,
+    "title": "Tere",
+    "category": "Portrait",
+    "imageUrl": "./album_covers/main cover.jpg"
+  },
+  {
+    "id": 68,
+    "title": "Man Of The Year",
+    "category": "Hip Hop",
+    "imageUrl": "./album_covers/man of the year.jpg"
+  },
+  {
+    "id": 69,
+    "title": "MCz",
+    "category": "Hip Hop",
+    "imageUrl": "./album_covers/MCz.jpg"
+  },
+  {
+    "id": 70,
+    "title": "Misinfo",
+    "category": "Typography",
+    "imageUrl": "./album_covers/misinfo.jpg"
+  },
+  {
+    "id": 71,
+    "title": "coins",
+    "category": "Manipulation",
+    "imageUrl": "./album_covers/mockupssss super.jpg"
+  },
+  {
+    "id": 72,
+    "title": "MoMot Fleuve",
+    "category": "Typography",
+    "imageUrl": "./album_covers/MoMot.jpg"
+  },
+  {
+    "id": 73,
+    "title": "Monster Cone",
+    "category": "Manipulation",
+    "imageUrl": "./album_covers/monster cone.jpg"
+  },
+  {
+    "id": 74,
+    "title": "Monster Cone",
+    "category": "Manipulation",
+    "imageUrl": "./album_covers/monster cone2.jpg"
+  },
+  {
+    "id": 75,
+    "title": "Morning Sun",
+    "category": "Synthwave",
+    "imageUrl": "./album_covers/morning sun1.jpg"
+  },
+  {
+    "id": 76,
+    "title": "Mullet",
+    "category": "Typography",
+    "imageUrl": "./album_covers/mullet 3.jpg"
+  },
+  {
+    "id": 77,
+    "title": "Mullet",
+    "category": "Portrait",
+    "imageUrl": "./album_covers/Mullet.jpg"
+  },
+  {
+    "id": 78,
+    "title": "Farms",
+    "category": "Typography",
+    "imageUrl": "./album_covers/MY mocskup.jpg"
+  },
+  {
+    "id": 79,
+    "title": "Nasty",
+    "category": "Typography",
+    "imageUrl": "./album_covers/nasty1.jpg"
+  },
+  {
+    "id": 80,
+    "title": "Nasty",
+    "category": "Typography",
+    "imageUrl": "./album_covers/nasty2.jpg"
+  },
+  {
+    "id": 81,
+    "title": "Night Drive",
+    "category": "Synthwave",
+    "imageUrl": "./album_covers/night drive 2.jpg"
+  }
+  ,
+   {
+    "id": 82,
+    "title": "Aurora",
+    "category": "Synthwave",
+    "imageUrl": "./album_covers/aurora 2.jpg"
+  }
+  ,
+  {
+    "id": 83,
+    "title": "Night N Day",
+    "category": "Manipulation",
+    "imageUrl": "./album_covers/night n day.jpg"
+  },
+  {
+    "id": 84,
+    "title": "No Fear",
+    "category": "Typography",
+    "imageUrl": "./album_covers/no fear1.jpg"
+  },
+  {
+    "id": 85,
+    "title": "No Lullaby",
+    "category": "Portrait",
+    "imageUrl": "./album_covers/No Lullaby.jpg"
+  },
+  {
+    "id": 86,
+    "title": "No Man",
+    "category": "Manipulation",
+    "imageUrl": "./album_covers/No man.jpg"
+  },
+  {
+    "id": 87,
+    "title": "No Upset Thoughts Here",
+    "category": "Electro(EDM)",
+    "imageUrl": "./album_covers/No Upset Thoughts Here.jpg"
+  },
+  {
+    "id": 88,
+    "title": "Bharti Taylor",
+    "category": "Portrait",
+    "imageUrl": "./album_covers/Bharti Taylor.jpg"
+  }
+  ,
+  {
+    "id": 89,
+    "title": "Oh Myyy",
+    "category": "Synthwave",
+    "imageUrl": "./album_covers/oh myyy.jpg"
+  },
+  {
+    "id": 90,
+    "title": "Only Fans",
+    "category": "Typography",
+    "imageUrl": "./album_covers/only fans cover.jpg"
+  },
+  {
+    "id": 91,
+    "title": "Luving U",
+    "category": "Portrait",
+    "imageUrl": "./album_covers/originel.jpg"
+  },
+  {
+    "id": 92,
+    "title": "Over You",
+    "category": "Portrait",
+    "imageUrl": "./album_covers/over you.jpg"
+  },
+  {
+    "id": 93,
+    "title": "PANDEMONIUM",
+    "category": "Electro(EDM)",
+    "imageUrl": "./album_covers/PANDEMONIUM.jpg"
+  },
+  {
+    "id": 94,
+    "title": "PTSD",
+    "category": "Portrait",
+    "imageUrl": "./album_covers/parental.jpg"
+  },
+  {
+    "id": 95,
+    "title": "Pepper",
+    "category": "Manipulation",
+    "imageUrl": "./album_covers/pepper 3.0.jpg"
+  },
+  {
+    "id": 96,
+    "title": "Perreo Eterno",
+    "category": "Pop/Urban",
+    "imageUrl": "./album_covers/Perreo Eterno.jpg"
+  },
+  {
+    "id": 97,
+    "title": "Peace hardly",
+    "category": "Portrait",
+    "imageUrl": "./album_covers/all.jpg"
+  }
+ ,
+  {
+    "id": 98,
+    "title": "Real Rugrat",
+    "category": "Manipulation",
+    "imageUrl": "./album_covers/Real Rugrat.jpg"
+  },
+  {
+    "id": 99,
+    "title": "Rest Of My Life",
+    "category": "Portrait",
+    "imageUrl": "./album_covers/rest of my life.jpg"
+  },
+  {
+    "id": 100,
+    "title": "Resume",
+    "category": "Manipulation",
+    "imageUrl": "./album_covers/Resume.jpg"
+  },
+  {
+    "id": 101,
+    "title": "Right Way",
+    "category": "Synthwave",
+    "imageUrl": "./album_covers/Right Way.jpg"
+  },
+  {
+    "id": 102,
+    "title": "Rohde Remix",
+    "category": "Electro(EDM)",
+    "imageUrl": "./album_covers/Ruhde Remix.jpg"
+  },
+  {
+    "id": 103,
+    "title": "Shadow Kulture",
+    "category": "Manipulation",
+    "imageUrl": "./album_covers/Shadow Kulture.jpg"
+  },
+  {
+    "id": 104,
+    "title": "Shame In Game",
+    "category": "Electro(EDM)",
+    "imageUrl": "./album_covers/shame in game.jpg"
+  },
+  {
+    "id": 105,
+    "title": "Snooze",
+    "category": "Typography",
+    "imageUrl": "./album_covers/snooze1.jpg"
+  },
+  {
+    "id": 106,
+    "title": "Specture",
+    "category": "Manipulation",
+    "imageUrl": "./album_covers/specture 2.jpg"
+  },
+   {
+    "id": 107,
+    "title": "Alien Contra",
+    "category": "Manipulation",
+    "imageUrl": "./album_covers/alien contra.jpg"
+  }
+  ,
+  {
+    "id": 108,
+    "title": "Rio flow",
+    "category": "Electro(EDM)",
+    "imageUrl": "./album_covers/albumcover2.jpg"
+  }
+  ,
+  {
+    "id": 109,
+    "title": "Summer Time",
+    "category": "Synthwave",
+    "imageUrl": "./album_covers/summer time.jpg"
+  },
+  {
+    "id": 110,
+    "title": "Taalkimia V2",
+    "category": "Electro(EDM)",
+    "imageUrl": "./album_covers/taalkimia v2.png.jpg"
+  },
+  {
+    "id": 111,
+    "title": "The Coldest",
+    "category": "Manipulation",
+    "imageUrl": "./album_covers/the coldest 1.jpg"
+  },
+  {
+    "id": 112,
+    "title": "The Georgia Song",
+    "category": "Manipulation",
+    "imageUrl": "./album_covers/The Georgia Song.jpg"
+  },
+   {
+    "id": 113,
+    "title": "Big Faces",
+    "category": "Hip Hop",
+    "imageUrl": "./album_covers/big faces.jpg"
+  },
+  {
+    "id": 114,
+    "title": "Black Out",
+    "category": "Manipulation",
+    "imageUrl": "./album_covers/black out cover.jpg"
+  },
+  {
+    "id": 115,
+    "title": "Blessed",
+    "category": "Typography",
+    "imageUrl": "./album_covers/blessed.jpg"
+  },
+  {
+    "id": 116,
+    "title": "12 Meses",
+    "category": "Typography",
+    "imageUrl": "./album_covers/12 meses.jpg"
+  }
+ ,
+  {
+    "id": 117,
+    "title": "Untitled 1",
+    "category": "Typography",
+    "imageUrl": "./album_covers/Untitled-1.jpg"
+  },
+  {
+    "id": 118,
+    "title": "Untitled 1s",
+    "category": "Manipulation",
+    "imageUrl": "./album_covers/Untitled-1s.jpg"
+  },
+  {
+    "id": 119,
+    "title": "Wasteland 1",
+    "category": "Manipulation",
+    "imageUrl": "./album_covers/wasteland 1.jpg"
+  },
+  {
+    "id": 120,
+    "title": "Westside Groove",
+    "category": "Portrait",
+    "imageUrl": "./album_covers/westside Groove.jpg"
+  },
+  {
+    "id": 121,
+    "title": "Where Love Is Real",
+    "category": "Portrait",
+    "imageUrl": "./album_covers/where love is real.jpg"
+  },
+  {
+    "id": 122,
+    "title": "Wild Dream",
+    "category": "Manipulation",
+    "imageUrl": "./album_covers/wild dream.jpg"
+  },
+  {
+    "id": 123,
+    "title": "Wings Of Light",
+    "category": "Manipulation",
+    "imageUrl": "./album_covers/wings of light.jpg"
+  },
+  {
+    "id": 124,
+    "title": "WYA",
+    "category": "Typography",
+    "imageUrl": "./album_covers/WYA.jpg"
+  },
+  {
+    "id": 125,
+    "title": "Zillakami 1",
+    "category": "Portrait",
+    "imageUrl": "./album_covers/Zillakami1.jpg"
+  }
+]

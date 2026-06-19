@@ -1,25 +1,56 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Navbar from '../components/Navbar'; // Adjust path if needed
 
-
+// Your JSON data
+import albumsData from '../data/album.json';
 
 const DesignWork = () => {
-  // Mock array to generate the 12 portfolio items quickly
-  const portfolioItems = Array.from({ length: 12 });
+  // 1. Set up state for the active filter
+  const [activeFilter, setActiveFilter] = useState('ALL');
+
+  // 2. State for tracking the selected album for pop-up
+  const [selectedAlbum, setSelectedAlbum] = useState(null);
+
+  // 3. New State: Pagination
+  const [currentPage, setCurrentPage] = useState(1);
+  const itemsPerPage = 12; // 4 rows * 3 columns on large screens
+
+  // 4. Define your categories for the menu
+  const categories = ['ALL', 'Electro(EDM)', 'Hip Hop', 'Typography','Portrait','Manipulation','Synthwave','Pop/Urban'];
+
+  // 5. Filter the data based on the selected category
+  const filteredAlbums = activeFilter === 'ALL' 
+    ? albumsData 
+    : albumsData.filter(album => album.category === activeFilter);
+
+  // 6. Pagination Logic
+  const indexOfLastAlbum = currentPage * itemsPerPage;
+  const indexOfFirstAlbum = indexOfLastAlbum - itemsPerPage;
+  // Slice the array to only get the current page's albums
+  const currentAlbums = filteredAlbums.slice(indexOfFirstAlbum, indexOfLastAlbum);
+  
+  // Calculate total pages
+  const totalPages = Math.ceil(filteredAlbums.length / itemsPerPage);
+
+  // Helper function to handle filter changes (resets to page 1)
+  const handleFilterChange = (category) => {
+    setActiveFilter(category);
+    setCurrentPage(1); 
+  };
 
   return (
-    <div className="min-h-screen bg-grey-600 font-sans flex flex-col text-grey-50">
+    <div className="min-h-screen bg-grey-600 font-sans flex flex-col text-grey-50 relative">
       
-      {/* 1. Navbar */}
+      {/* Navbar */}
       <Navbar />
 
       {/* Main Content Container */}
       <main className="flex-1 w-full max-w-[1440px] mx-auto px-12 lg:px-20 py-16 flex flex-col">
         
-        {/* 2. Hero Typography Section */}
+        {/* Hero Typography Section */}
         <div className="mb-20 max-w-4xl">
           <h1 className="text-h3 lg:text-[5rem] leading-[0.95] font-black uppercase tracking-tight mb-6">
-            SONIC <span className="text-yellow-500">VISUALS</span> FOR <br />
+            <span className="text-yellow-500">VISUALS</span> FOR <br />
             THE NEW ERA.
           </h1>
           <p className="text-grey-200 text-sm md:text-base leading-relaxed max-w-2xl font-light tracking-wide">
@@ -28,48 +59,86 @@ const DesignWork = () => {
           </p>
         </div>
 
-        {/* 3. Portfolio Grid Section */}
+        {/* Portfolio Grid Section */}
         <div className="flex flex-col mb-16">
           
           {/* Header & Filters */}
           <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 border-b border-grey-400/30 pb-4">
             <h2 className="text-yellow-500 text-[11px] font-bold tracking-[0.2em] uppercase mb-4 md:mb-0">
-              FEATURED DISCOGRAPHY
+              Album & Single covers
             </h2>
             
+            {/* Dynamic Filter Menu */}
             <ul className="flex space-x-6 text-[10px] font-bold tracking-[0.15em] text-grey-200 uppercase">
-              <li className="text-yellow-500 border-b border-yellow-500 pb-1 cursor-pointer">ALL</li>
-              <li className="hover:text-white transition-colors cursor-pointer pb-1">TECHNO</li>
-              <li className="hover:text-white transition-colors cursor-pointer pb-1">AMBIENT</li>
-              <li className="hover:text-white transition-colors cursor-pointer pb-1">INDUSTRIAL</li>
+              {categories.map((category) => (
+                <li 
+                  key={category}
+                  onClick={() => handleFilterChange(category)}
+                  className={`cursor-pointer pb-1 transition-colors ${
+                    activeFilter === category 
+                      ? 'text-yellow-500 border-b border-yellow-500' 
+                      : 'hover:text-white'
+                  }`}
+                >
+                  {category}
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* The Grid */}
+          {/* The Grid - Now mapping over currentAlbums instead of filteredAlbums */}
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
-            {portfolioItems.map((_, index) => (
+            {currentAlbums.map((album) => (
               <div 
-                key={index} 
+                key={album.id} 
+                onClick={() => setSelectedAlbum(album)}
                 className="aspect-square bg-grey-500 flex items-center justify-center overflow-hidden relative group cursor-pointer border border-grey-400/20 hover:border-grey-300 transition-colors"
               >
-                {/* Placeholder graphic simulating your 3D art */}
-                <div className="w-[60%] h-[60%] bg-gradient-to-br from-grey-400 to-grey-600 transform rotate-45 shadow-2xl group-hover:scale-105 transition-transform duration-500"></div>
-                <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-colors"></div>
+                {/* Album Cover Image */}
+                <img 
+                  src={album.imageUrl} 
+                  alt={album.title}
+                  className="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500"
+                  onError={(e) => {
+                    e.target.src = "https://via.placeholder.com/500/333333/FFFFFF?text=Image+Not+Found";
+                  }}
+                />
+                
+                {/* Hover Overlay */}
+                <div className="absolute inset-0 bg-black/70 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-center items-center p-4 text-center">
+                   <h3 className="text-white font-bold text-xl tracking-widest mb-2">{album.title}</h3>
+                   <span className="text-yellow-500 text-[10px] tracking-[0.2em] uppercase border border-yellow-500 px-3 py-1">
+                     {album.category}
+                   </span>
+                </div>
               </div>
             ))}
           </div>
 
-          {/* Pagination */}
-          <div className="flex justify-center items-center space-x-2">
-            <button className="w-8 h-8 flex items-center justify-center bg-yellow-500 text-grey-600 text-xs font-bold">1</button>
-            <button className="w-8 h-8 flex items-center justify-center bg-grey-300 text-grey-600 hover:bg-grey-200 transition-colors text-xs font-bold">2</button>
-            <button className="w-8 h-8 flex items-center justify-center bg-grey-300 text-grey-600 hover:bg-grey-200 transition-colors text-xs font-bold">3</button>
-            <button className="w-8 h-8 flex items-center justify-center bg-grey-300 text-grey-600 hover:bg-grey-200 transition-colors text-xs font-bold">4</button>
-            <button className="w-8 h-8 flex items-center justify-center bg-grey-300 text-grey-600 hover:bg-grey-200 transition-colors text-xs font-bold">5</button>
-          </div>
+          {/* Dynamic Pagination UI */}
+          {totalPages > 1 && (
+            <div className="flex justify-center items-center space-x-2">
+              {[...Array(totalPages)].map((_, index) => {
+                const pageNumber = index + 1;
+                return (
+                  <button 
+                    key={pageNumber}
+                    onClick={() => setCurrentPage(pageNumber)}
+                    className={`w-8 h-8 flex items-center justify-center text-xs font-bold transition-colors ${
+                      currentPage === pageNumber 
+                        ? 'bg-yellow-500 text-grey-600' 
+                        : 'bg-grey-300 text-grey-600 hover:bg-grey-200'
+                    }`}
+                  >
+                    {pageNumber}
+                  </button>
+                );
+              })}
+            </div>
+          )}
         </div>
 
-        {/* 4. Client Reviews Section */}
+        {/* Client Reviews Section */}
         <div className="flex flex-col mt-10 mb-10">
           <h2 className="text-[3rem] lg:text-[4rem] leading-none font-black uppercase tracking-tight mb-8">
             <span className="text-yellow-500">CLIENT</span> REVIEWS
@@ -88,7 +157,7 @@ const DesignWork = () => {
             </div>
 
             <p className="text-grey-100 text-sm leading-relaxed max-w-5xl">
-              Since 2021, I have operated as a top-tier freelancer on <span className="text-yellow-500 font-bold">FIVERR</span>, delivering over 400+ unique visual identities for independent artists and major labels worldwide. Since 2021, I have operated as a top-tier freelancer on <span className="text-yellow-500 font-bold">FIVERR</span>, delivering over 400+ unique visual identities for independent artists and major labels worldwide. Since 2021, I have operated as a top-tier freelancer on <span className="text-yellow-500 font-bold">FIVERR</span>, delivering over 400+ unique visual identities for independent artists and major labels worldwide.
+              Since 2021, I have operated as a top-tier freelancer on <span className="text-yellow-500 font-bold">FIVERR</span>, delivering over 400+ unique visual identities for independent artists and major labels worldwide. 
             </p>
           </div>
 
@@ -105,7 +174,7 @@ const DesignWork = () => {
 
       </main>
 
-      {/* 5. Footer */}
+      {/* Footer */}
       <footer className="w-full border-t border-grey-400/20 py-8 px-12 lg:px-20 mt-auto flex flex-col md:flex-row justify-between items-center">
         <div className="text-yellow-500 font-bold tracking-widest text-xs mb-4 md:mb-0">
           STUDIO_NOIR
@@ -114,6 +183,39 @@ const DesignWork = () => {
           © 2024 STUDIO NOIR. ALL RIGHTS RESERVED.
         </div>
       </footer>
+
+      {/* Image Pop-up Modal */}
+      {selectedAlbum && (
+        <div 
+          className="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/90 backdrop-blur-sm cursor-pointer"
+          onClick={() => setSelectedAlbum(null)} 
+        >
+          <div 
+            className="relative max-w-4xl max-h-[90vh] bg-grey-600 p-2 rounded-xl border border-grey-400/20"
+            onClick={(e) => e.stopPropagation()} 
+          >
+            <button 
+              onClick={() => setSelectedAlbum(null)}
+              className="absolute top-4 right-4 text-white hover:text-yellow-500 transition-colors z-10 p-2 bg-grey-600 rounded-full"
+            >
+               <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
+            </button>
+            
+            <img 
+              src={selectedAlbum.imageUrl} 
+              alt={selectedAlbum.title}
+              className="w-[600px] object-contain rounded-lg"
+              onError={(e) => { e.target.src = "https://via.placeholder.com/1000/333333/FFFFFF?text=Image+Not+Found";}}
+            />
+             <div className="p-6 text-center">
+                <h3 className="text-white font-black text-2xl uppercase tracking-widest mb-3">{selectedAlbum.title}</h3>
+                <span className="text-yellow-500 text-xs tracking-[0.2em] uppercase border border-yellow-500 px-4 py-2 inline-block">
+                   {selectedAlbum.category}
+                </span>
+             </div>
+          </div>
+        </div>
+      )}
 
     </div>
   );
