@@ -8,7 +8,7 @@ import TestPortfolio from './pages/TestPortfolio.jsx';
 function App() {
 
   return (
-    <Router basename="/sudeera_perera">
+    <Router basename="/">
       <Routes >
         <Route path="/" element={<Home />} />
         <Route path="/work" element={<Works />} />
