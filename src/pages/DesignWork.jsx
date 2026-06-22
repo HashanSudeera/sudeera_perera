@@ -32,10 +32,20 @@ const DesignWork = () => {
   // Calculate total pages
   const totalPages = Math.ceil(filteredAlbums.length / itemsPerPage);
 
-  // Helper function to handle filter changes (resets to page 1)
+  // Helper function to handle filter changes
   const handleFilterChange = (category) => {
     setActiveFilter(category);
     setCurrentPage(1); 
+  };
+
+  // Helper function to handle page changes AND scroll to top
+  const handlePageChange = (pageNumber) => {
+    setCurrentPage(pageNumber);
+    // Smoothly scroll the window back to the top
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
   };
 
   return (
@@ -45,31 +55,36 @@ const DesignWork = () => {
       <Navbar />
 
       {/* Main Content Container */}
-      <main className="flex-1 w-full max-w-[1440px] mx-auto px-12 lg:px-20 py-16 flex flex-col">
+      <main className="flex-1 w-full max-w-[1440px] mx-auto px-6 md:px-12 lg:px-20 py-16 flex flex-col">
         
         {/* Hero Typography Section */}
-        <div className="mb-20 max-w-4xl">
-          <h1 className="text-h3 lg:text-[5rem] leading-[0.95] font-black uppercase tracking-tight mb-6">
-            <span className="text-yellow-500">VISUALS</span> FOR <br />
-            THE NEW ERA.
-          </h1>
-          <p className="text-grey-200 text-sm md:text-base leading-relaxed max-w-2xl font-light tracking-wide">
-            Translating frequency into form. Our album covers are designed to be as visceral as the music 
-            they represent. From digital rollouts to physical vinyl pressings.
-          </p>
+        <div className="flex flex-col lg:flex-row justify-between items-start lg:items-end mb-16 pb-12">
+          <div className="max-w-3xl">
+            <h4 className="text-yellow-400 text-xs font-bold tracking-[0.3em] uppercase mb-4">
+              Design / Cover arts
+            </h4>
+            <h1 className="text-5xl md:text-7xl lg:text-[6rem] font-black uppercase tracking-tighter leading-[0.9]">
+              Cover <span className="text-yellow-400">arts</span>
+            </h1>
+          </div>
+          <div className="max-w-md mt-8 lg:mt-0 lg:border-t-2 border-yellow-400 pt-4">
+            <p className="text-zinc-400 text-3xl leading-relaxed font-light">
+              100 + 
+            </p>
+          </div>
         </div>
 
         {/* Portfolio Grid Section */}
         <div className="flex flex-col mb-16">
           
           {/* Header & Filters */}
-          <div className="flex flex-col md:flex-row justify-between items-start md:items-end mb-8 border-b border-grey-400/30 pb-4">
-            <h2 className="text-yellow-500 text-[11px] font-bold tracking-[0.2em] uppercase mb-4 md:mb-0">
+          <div className="flex flex-col xl:flex-row justify-between items-start xl:items-end mb-8 border-b border-grey-400/30 pb-4 gap-y-4">
+            <h2 className="text-yellow-500 text-[11px] font-bold tracking-[0.2em] uppercase shrink-0">
               Album & Single covers
             </h2>
             
             {/* Dynamic Filter Menu */}
-            <ul className="flex space-x-6 text-[10px] font-bold tracking-[0.15em] text-grey-200 uppercase">
+            <ul className="flex flex-wrap gap-x-6 gap-y-3 text-[10px] font-bold tracking-[0.15em] text-grey-200 uppercase">
               {categories.map((category) => (
                 <li 
                   key={category}
@@ -86,8 +101,8 @@ const DesignWork = () => {
             </ul>
           </div>
 
-          {/* The Grid - Now mapping over currentAlbums instead of filteredAlbums */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
+          {/* The Grid */}
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 mb-12">
             {currentAlbums.map((album) => (
               <div 
                 key={album.id} 
@@ -117,13 +132,13 @@ const DesignWork = () => {
 
           {/* Dynamic Pagination UI */}
           {totalPages > 1 && (
-            <div className="flex justify-center items-center space-x-2">
+            <div className="flex justify-center items-center space-x-2 flex-wrap gap-y-2">
               {[...Array(totalPages)].map((_, index) => {
                 const pageNumber = index + 1;
                 return (
                   <button 
                     key={pageNumber}
-                    onClick={() => setCurrentPage(pageNumber)}
+                    onClick={() => handlePageChange(pageNumber)}
                     className={`w-8 h-8 flex items-center justify-center text-xs font-bold transition-colors ${
                       currentPage === pageNumber 
                         ? 'bg-yellow-500 text-grey-600' 
@@ -172,14 +187,34 @@ const DesignWork = () => {
           </div>
         </div>
 
+        {/* Social Media Kit Link Section */}
+        <div className="flex flex-col mt-12 mb-8 items-center justify-center bg-grey-500 rounded-xl p-8 lg:p-12 border border-grey-400/20 text-center relative overflow-hidden group">
+          <div className="absolute inset-0 bg-gradient-to-br from-yellow-500/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500"></div>
+          
+          <h2 className="text-3xl md:text-5xl font-black uppercase tracking-tight mb-4 z-10">
+            Need <span className="text-yellow-500">Social Media</span> Assets?
+          </h2>
+          <p className="text-grey-200 text-sm max-w-2xl mb-8 z-10 font-light px-4">
+            Dominate the feed with high-impact visual assets designed for maximum engagement. 
+            Explore our specialized social media kits tailored for modern platforms.
+          </p>
+          
+          <a 
+            href="/social-media-kit" 
+            className="z-10 bg-yellow-500 text-grey-600 font-bold tracking-widest uppercase text-xs px-10 py-4 hover:brightness-110 transition-all cursor-pointer shadow-lg"
+          >
+            Open Social Media Kit
+          </a>
+        </div>
+
       </main>
 
       {/* Footer */}
-      <footer className="w-full border-t border-grey-400/20 py-8 px-12 lg:px-20 mt-auto flex flex-col md:flex-row justify-between items-center">
-        <div className="text-yellow-500 font-bold tracking-widest text-xs mb-4 md:mb-0">
+      <footer className="w-full border-t border-grey-400/20 py-8 px-6 md:px-12 lg:px-20 mt-auto flex flex-col md:flex-row justify-between items-center gap-y-4">
+        <div className="text-yellow-500 font-bold tracking-widest text-xs">
           STUDIO_NOIR
         </div>
-        <div className="text-grey-200 text-[10px] tracking-widest uppercase">
+        <div className="text-grey-200 text-[10px] tracking-widest uppercase text-center">
           © 2024 STUDIO NOIR. ALL RIGHTS RESERVED.
         </div>
       </footer>
@@ -191,12 +226,12 @@ const DesignWork = () => {
           onClick={() => setSelectedAlbum(null)} 
         >
           <div 
-            className="relative max-w-4xl max-h-[90vh] bg-grey-600 p-2 rounded-xl border border-grey-400/20"
+            className="relative w-full max-w-4xl max-h-[90vh] bg-grey-600 p-2 rounded-xl border border-grey-400/20 overflow-hidden flex flex-col items-center"
             onClick={(e) => e.stopPropagation()} 
           >
             <button 
               onClick={() => setSelectedAlbum(null)}
-              className="absolute top-4 right-4 text-white hover:text-yellow-500 transition-colors z-10 p-2 bg-grey-600 rounded-full"
+              className="absolute top-4 right-4 text-white hover:text-yellow-500 transition-colors z-10 p-2 bg-grey-600/80 rounded-full backdrop-blur"
             >
                <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M6 18L18 6M6 6l12 12" /></svg>
             </button>
@@ -204,12 +239,12 @@ const DesignWork = () => {
             <img 
               src={selectedAlbum.imageUrl} 
               alt={selectedAlbum.title}
-              className="w-[600px] object-contain rounded-lg"
+              className="w-full max-w-[600px] h-auto object-contain rounded-lg"
               onError={(e) => { e.target.src = "https://via.placeholder.com/1000/333333/FFFFFF?text=Image+Not+Found";}}
             />
-             <div className="p-6 text-center">
-                <h3 className="text-white font-black text-2xl uppercase tracking-widest mb-3">{selectedAlbum.title}</h3>
-                <span className="text-yellow-500 text-xs tracking-[0.2em] uppercase border border-yellow-500 px-4 py-2 inline-block">
+             <div className="p-6 text-center w-full">
+                <h3 className="text-white font-black text-xl md:text-2xl uppercase tracking-widest mb-3">{selectedAlbum.title}</h3>
+                <span className="text-yellow-500 text-[10px] md:text-xs tracking-[0.2em] uppercase border border-yellow-500 px-4 py-2 inline-block">
                    {selectedAlbum.category}
                 </span>
              </div>
